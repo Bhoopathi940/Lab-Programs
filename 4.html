@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Web Page</title>
+  <script>
+    // Accessing the document object and its properties
+    document.getElementById('demo').innerHTML = 'Hello, JavaScript!';
+
+    // Using the Window object methods
+    function showAlert() {
+      alert('This is an alert message!');
+    }
+
+    // Using eval() method to evaluate JavaScript code
+    function evaluateExpression() {
+      var x = 10;
+      var y = 20;
+      var result = eval('x + y');
+      alert('The result is: ' + result);
+    }
+
+    // Using parseInt() method to parse a string into an integer
+    function parseInteger() {
+      var numString = '10';
+      var num = parseInt(numString);
+      alert('Parsed integer: ' + num);
+    }
+  </script>
+</head>
+<body>
+  <!-- Using document object to manipulate HTML content -->
+  <p id="demo"></p>
+
+  <!-- Using Window object method -->
+  <button onclick="showAlert()">Show Alert</button>
+
+  <!-- Using eval() method -->
+  <button onclick="evaluateExpression()">Evaluate Expression</button>
+
+  <!-- Using Parselnt() method -->
+  <button onclick="parseInteger()">Parse Integer</button>
+</body>
+</html>

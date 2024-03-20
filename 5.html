@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Objects Example</title>
+</head>
+<body>
+<h1>JavaScript Objects Example</h1>
+<script>
+  // User-defined object
+  function Person(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  // Using built-in objects and user-defined object
+  let person1 = new Person('John', 30);
+  let person2 = new Person('Jane', 25);
+  let today = new Date();
+
+  document.write('<h2>Navigator object:</h2>');
+  document.write('<pre>' + JSON.stringify(navigator, null, 2) + '</pre>');
+
+  document.write('<h2>Date object:</h2>');
+  document.write('<p>Today is: ' + today.toDateString() + '</p>');
+
+  document.write('<h2>Array object:</h2>');
+  document.write('<p>Is array: ' + Array.isArray([]) + '</p>');
+
+  document.write('<h2>Event object:</h2>');
+  document.write('<p>Created event: ' + new Event('click') + '</p>');
+
+  document.write('<h2>Number object:</h2>');
+  document.write('<p>Max value: ' + Number.MAX_VALUE + '</p>');
+
+  document.write('<h2>User-defined objects:</h2>');
+  document.write('<p>Person 1: ' + person1.name + ' - ' + person1.age + ' years old</p>');
+  document.write('<p>Person 2: ' + person2.name + ' - ' + person2.age + ' years old</p>');
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Form Validation</title>
+	<script>
+		function validateForm() {
+			var name = document.forms["myForm"]["name"].value;
+			var email = document.forms["myForm"]["email"].value;
+			var password = document.forms["myForm"]["password"].value;
+			var message = document.forms["myForm"]["message"].value;
+			var select = document.forms["myForm"]["select"].value;
+
+			if (name == "") {
+				alert("Name must be filled out");
+				return false;
+			}
+			if (email == "") {
+				alert("Email must be filled out");
+				return false;
+			}
+			if (password == "") {
+				alert("Password must be filled out");
+				return false;
+			}
+			if (message == "") {
+				alert("Message must be filled out");
+				return false;
+			}
+			if (select == "") {
+				alert("Please select an option");
+				return false;
+			}
+			return true;
+		}
+	</script>
+</head>
+
+<body>
+	<h2>Form Validation Example</h2>
+	<form name="myForm" onsubmit="return validateForm()" method="post">
+		<label for="name">Name:</label><br>
+		<input type="text" id="name" name="name"><br><br>
+
+		<label for="email">Email:</label><br>
+		<input type="email" id="email" name="email"><br><br>
+
+		<label for="password">Password:</label><br>
+		<input type="password" id="password" name="password"><br><br>
+
+		<label for="message">Message:</label><br>
+		<textarea id="message" name="message"></textarea><br><br>
+
+		<label for="select">Select:</label><br>
+		<select id="select" name="select">
+			<option value=""></option>
+			<option value="Option 1">Option 1</option>
+			<option value="Option 2">Option 2</option>
+			<option value="Option 3">Option 3</option>
+		</select><br><br>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+
+</html>
